@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">HF</string>
+
+    <string name="username">Username</string>
+    <string name="userDistance">2 km</string>
+
+    <string name="waterText">Water</string>
+    <string name="waterButton">500 ML</string>
+
+    <string name="foodText">Food Intake</string>
+    <string name="foodButton">Select Food</string>
+
+    <string name="dailyText">Daily check in</string>
+    <string name="dailyButton">+</string>
+
+    <string name="menuText">Menu</string>
+
+
 </resources>
