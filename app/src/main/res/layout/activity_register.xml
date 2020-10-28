@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:context=".register">
+
+
+
+
+
+<ImageView
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/backgroundimage"
+    android:scaleX="4"
+    android:scaleY="4"
+    android:translationY="60dp"
+    app:srcCompat="@drawable/template" />
+
+<ImageView
+    android:id="@+id/logo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scaleX="3"
+    android:scaleY="3"
+    app:srcCompat="@drawable/logo"
+    android:layout_marginTop="-150dp"/>
+
+<TextView
+    android:id="@+id/RegisterText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/register"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textSize="45sp"
+    android:translationY="225dp" />
+
+<EditText
+    android:id="@+id/etRegisterEmail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="#F0E68C"
+    android:hint="@string/email"
+    android:inputType="textEmailAddress"
+    android:padding="12dp"
+    android:translationY="290dp" />
+
+<EditText
+    android:id="@+id/etRegisterUsername"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="#F0E68C"
+    android:hint="@string/username"
+    android:inputType="text"
+    android:padding="12dp"
+    android:translationY="350dp" />
+
+
+    <EditText
+        android:id="@+id/etRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#F0E68C"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:translationY="410dp" />
+
+
+
+<Button
+    android:id="@+id/btnRegister"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="#aaa"
+    android:text="@string/register"
+    android:textColor="@android:color/white"
+    android:translationY="470dp" />
+
+<TextView
+    android:id="@+id/textboxOr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/or"
+    android:textColor="#ccc"
+    android:textSize="20sp"
+    android:translationY="530dp" />
+
+<Button
+    android:id="@+id/google_register_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:tag="google_login_button"
+    android:text="@string/sign_up_google"
+    android:textColor="@color/white"
+    android:translationY="550dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:padding="12dp" />
+
+</RelativeLayout>

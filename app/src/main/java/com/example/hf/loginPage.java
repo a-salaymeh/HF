@@ -47,6 +47,13 @@ public class loginPage extends AppCompatActivity {
                 signIn();
             }
         });
+
+        registerButton.setOnClickListener(v -> {
+            if(v==registerButton){
+                startActivity(new Intent(this, register.class));
+                finish();
+            }
+        });
     }
     public void signIn(){
         mAuth.signInWithEmailAndPassword(loginUsername.getText().toString(), loginPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -62,6 +69,10 @@ public class loginPage extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 //    public void onStart() {
 //        super.onStart();
 //        // Check if user is signed in (non-null) and update UI accordingly.
