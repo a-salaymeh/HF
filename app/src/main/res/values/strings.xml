@@ -1,4 +1,37 @@
 <resources>
+    <!--Log in page strings-->
+    <!--Register page strings-->
     <string name="app_name">HF</string>
+    <string name="backgroundimage">BACKGROUNDIMAGE</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="noAccount">Dont Have an Account?</string>
+    <string name="register">register</string>
+    <string name="or">or</string>
+    <string name="sign_in_google">Sign In With Google</string>
+    <string name="sign_up_google">Sign Up With Google</string>
+    <string name="email">Email Address</string>
+    <string name="login">Login</string>
+
+
+    <!--main page strings-->
+    <string name="userDistance"> Distance </string>
+    <string name="waterText">water</string>
+    <string name="waterButton">500ML</string>
+    <string name="foodText">food</string>
+    <string name="foodButton">food</string>\
+    <string name="dailyText">daily check in</string>
+    <string name="dailyButton">+</string>
+    <string name="menuText">menu</string>
+
+    <!--menu page strings-->
+    <string name="title">Hawk</string>
+    <string name="Workouts">Workout Exercises</string>
+    <string name="Routine">Workout Routine</string>
+    <string name="CIC">Calorie Intake Calculator</string>
+    <string name="playlist">Workout Playlist</string>
+    <string name="Pedometer">Pedometer</string>
+
 
 </resources>

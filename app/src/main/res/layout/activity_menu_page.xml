@@ -19,7 +19,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hawk"
+        android:text="@string/title"
         android:textSize="75sp"
         android:textColor="@color/white"
         android:layout_marginLeft="99dp"/>
@@ -30,7 +30,7 @@
         android:layout_marginTop="115dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Workout Exercises"
+        android:text="@string/Workouts"
         android:textSize="20dp"/>
 
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="169dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text ="Workout Routine"
+        android:text ="@string/Routine"
         android:textSize ="20dp"/>
 
     <Button
@@ -49,7 +49,7 @@
         android:layout_marginTop="232dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Calorie Intake Calculator"
+        android:text="@string/CIC"
         android:textSize="20dp"/>
 
 
@@ -59,7 +59,7 @@
         android:layout_marginTop="330dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Workout Playlist"
+        android:text="@string/playlist"
         android:textSize="20dp"/>
 
     <Button
