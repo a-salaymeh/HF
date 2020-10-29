@@ -98,28 +98,6 @@
         android:textColor="@android:color/white"
         android:translationY="470dp" />
 
-    <TextView
-        android:id="@+id/textboxOr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/or"
-        android:textColor="#ccc"
-        android:textSize="20sp"
-        android:translationY="530dp" />
 
-    <Button
-        android:id="@+id/google_register_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="google_login_button"
-        android:text="@string/sign_up_google"
-        android:textColor="@color/white"
-        android:translationY="550dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:padding="12dp" />
 
 </RelativeLayout>

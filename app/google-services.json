@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1070305108694",
+    "firebase_url": "https://hawkfitness-1efb7.firebaseio.com",
+    "project_id": "hawkfitness-1efb7",
+    "storage_bucket": "hawkfitness-1efb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070305108694:android:2b921e51e872fa69b9df77",
+        "android_client_info": {
+          "package_name": "com.example.hf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070305108694-mjq8lourodkb3ar29p6ridtgdsigh90q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6tAvQ85gL6LlEW6u4pVQRy4xnhla2oVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070305108694-mjq8lourodkb3ar29p6ridtgdsigh90q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
