@@ -7,7 +7,7 @@
     <string name="password">password</string>
     <string name="sign_in">Sign in</string>
     <string name="noAccount">Dont Have an Account?</string>
-    <string name="register">register</string>
+    <string name="register">REGISTER</string>
     <string name="or">or</string>
     <string name="sign_in_google">Sign In With Google</string>
     <string name="sign_up_google">Sign Up With Google</string>
@@ -23,10 +23,9 @@
     <string name="foodButton">food</string>\
     <string name="dailyText">daily check in</string>
     <string name="dailyButton">+</string>
-    <string name="menuText">menu</string>
+    <string name="menuText">Menu</string>
 
     <!--menu page strings-->
-    <string name="title">Hawk</string>
     <string name="Workouts">Workout Exercises</string>
     <string name="Routine">Workout Routine</string>
     <string name="CIC">Calorie Intake Calculator</string>
