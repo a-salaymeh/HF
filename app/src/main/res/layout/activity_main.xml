@@ -26,6 +26,8 @@
             </TextView>
 
             <TextView
+                android:id="@+id/userDistance"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/userDistance"

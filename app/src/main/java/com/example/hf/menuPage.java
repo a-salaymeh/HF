@@ -27,6 +27,10 @@ public class menuPage extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+
+
+
+
 //        mTextView = (TextView) findViewById(R.id.text);
 //        // Enables Always-on
 //        setAmbientEnabled();
