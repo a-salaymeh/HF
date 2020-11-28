@@ -18,12 +18,12 @@
                 android:id="@+id/UsernameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/username"
                 android:textSize="30sp"
                 android:layout_marginTop="50dp"
                 android:gravity="center"
-                >
-            </TextView>
+                android:text="xxxxx"
+                android:textColor="@color/black"
+                />
 
             <TextView
                 android:layout_width="match_parent"
