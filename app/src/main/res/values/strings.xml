@@ -31,6 +31,7 @@
     <string name="CIC">Calorie Intake Calculator</string>
     <string name="playlist">Workout Playlist</string>
     <string name="Pedometer">Pedometer</string>
+    <string name="logoutbtn">Log out</string>
 
 
 </resources>
