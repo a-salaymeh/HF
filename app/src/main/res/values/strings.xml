@@ -34,4 +34,13 @@
     <string name="logoutbtn">Log out</string>
 
 
+    <!--    -->
+    <string name="player">Player</string>
+    <string name="songName">Song Name</string>
+    <string name="nowPlaying">Now Playing</string>
+    <string name="artistName">Artist Name</string>
+
+
+
+
 </resources>

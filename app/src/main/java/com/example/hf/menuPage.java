@@ -13,6 +13,8 @@ public class menuPage extends AppCompatActivity {
 
     private TextView mTextView;
     Button exerButton;
+    Button playListButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,10 @@ public class menuPage extends AppCompatActivity {
         setContentView(R.layout.activity_menu_page);
 
         exerButton = findViewById(R.id.workexer);
+
+        playListButton = findViewById(R.id.playList);
+
+
         exerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +33,17 @@ public class menuPage extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+        playListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(menuPage.this, SpotifyPlayer.class);
+                startActivity(intent2);
+            }
+        });
+
+
+
+
 //        mTextView = (TextView) findViewById(R.id.text);
 //        // Enables Always-on
 //        setAmbientEnabled();
