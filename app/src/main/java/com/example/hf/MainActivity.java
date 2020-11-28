@@ -13,6 +13,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import com.spotify.android.appremote.api.ConnectionParams;
+import com.spotify.android.appremote.api.Connector;
+import com.spotify.android.appremote.api.SpotifyAppRemote;
+
+import com.spotify.protocol.client.Subscription;
+import com.spotify.protocol.types.PlayerState;
+import com.spotify.protocol.types.Track;
+
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener, StepListener{
     private Button menuButton;
@@ -27,11 +35,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private StepDetector simpleStepDetector;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressBar = findViewById(R.id.disProgressBar);
+        progressBar.setProgress(0);
         userDistance = findViewById(R.id.userDistance );
         menuButton = findViewById(R.id.menuButton);
         dailyButton = findViewById(R.id.dailyButton);
@@ -45,6 +56,16 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         simpleStepDetector.registerListener(this);
         numSteps = 0;
         sensorManager.registerListener(MainActivity.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
+
+
+
+
+
+
+
+
+
+
 
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
 
     }
+
+
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
