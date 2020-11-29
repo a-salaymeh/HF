@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainPage"
@@ -8,173 +8,161 @@
     tools:context=".MainActivity">
 
 
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/menuText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/dislayout"
+        app:layout_constraintTop_toBottomOf="@id/menuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:id="@+id/disText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userDistance"
+        android:textSize="40sp">
+    </TextView>
+
+    <ProgressBar
+        android:id="@+id/disProgressBar"
         android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circularsbar"
+        app:layout_constraintTop_toBottomOf="@+id/disText"
+        tools:progress="20">
+    </ProgressBar>
+
+    <TextView
+        android:id="@+id/userDistance"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/UsernameText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginTop="50dp"
-                android:gravity="center"
-                android:text="xxxxx"
-                android:textColor="@color/black"
-                />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/userDistance"
-                android:textSize="25sp"
-                android:gravity="center"
-                android:layout_marginTop="100dp"
-                >
-
-            </TextView>
-
-            <ProgressBar
-                android:id="@+id/disProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="140dp"
-                android:layout_marginRight="40dp"
-                android:progress="45"
-                android:progressTint="#FFC107"
-                android:scaleY="4">
-
-            </ProgressBar>
-
-            <TextView
-                android:id="@+id/waterText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/waterText"
-                android:textSize="25sp"
-                android:layout_marginTop="180dp"
-                android:layout_marginLeft="55dp"
-                android:layout_marginRight="220dp"
-                >
-            </TextView>
-
-            <ProgressBar
-                android:id="@+id/waterProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="220dp"
-                android:layout_marginRight="190dp"
-                android:progress="50"
-                android:progressTint="#03A9F4"
-
-                android:scaleY="4">
-
-            </ProgressBar>
-
-            <Button
-                android:id="@+id/waterButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="250dp"
-                android:layout_marginRight="200dp"
-                android:backgroundTint="#03A9F4"
-                android:text="@string/waterButton"
-                app:strokeColor="#03A9F4">
-
-            </Button>
-            <TextView
-                android:id="@+id/foodText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/foodText"
-                android:textSize="25sp"
-                android:layout_marginTop="180dp"
-                android:layout_marginLeft="199dp"
-                android:layout_marginRight="19dp"
-                >
-            </TextView>
-
-            <ProgressBar
-                android:id="@+id/calProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="220dp"
-                android:layout_marginRight="20dp"
-                android:progress="50"
-                android:progressTint="#F44336"
-                android:scaleY="4">
-            </ProgressBar>
-
-            <Button
-                android:id="@+id/foodButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="250dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="#F44336"
-                android:text="@string/foodButton"
-                app:strokeColor="#03A9F4">
-            </Button>
-            <TextView
-                android:id="@+id/dailyText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/dailyText"
-                android:textSize="25sp"
-                android:layout_marginTop="360dp"
-                android:gravity="center"
-                >
-            </TextView>
-
-            <ProgressBar
-                android:id="@+id/dailyProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="400dp"
-                android:layout_marginRight="40dp"
-                android:progress="50"
-                android:progressTint="#4CAF50"
-                android:scaleY="5">
-
-            </ProgressBar>
-            <Button
-                android:id="@+id/dailyButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="450dp"
-                android:layout_marginRight="150dp"
-                android:backgroundTint="#4CAF50"
-                android:text="@string/dailyButton"
-                android:textSize="30sp"
-                app:strokeColor="#03A9F4">
-
-            </Button>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="270dp"
-                android:layout_marginLeft="10dp"
-                android:text="@string/menuText"
-                android:id="@+id/menuButton"
-                >
-
-            </Button>
-        </RelativeLayout>
+    </TextView>
     </LinearLayout>
 
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/waterout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/dislayout"
+        app:layout_constraintEnd_toStartOf="@id/dislayout"
+        app:layout_constraintStart_toStartOf="@id/menuButton">
+        <TextView
+            android:id="@+id/waterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/waterText"
+            android:layout_gravity="center"
+            android:textSize="25sp">
+
+        </TextView>
+        <ProgressBar
+            android:id="@+id/waterProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateOnly="false"
+            android:layout_gravity="center"
+            android:progress="100"
+            android:progressDrawable="@drawable/circularsbar">
+        </ProgressBar>
+        <EditText
+            android:hint="@string/waterIntake"
+            android:inputType="number"
+            android:id="@+id/userWater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/menuText"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/foodout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/dislayout"
+        app:layout_constraintTop_toBottomOf="@id/dislayout"
+        app:layout_constraintEnd_toStartOf="@+id/view1">
+
+        <TextView
+            android:id="@+id/foodhelper"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/waterText"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            tools:ignore="Suspicious0dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/foodText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/foodText"
+            android:textSize="25sp">
+        </TextView>
+        <ProgressBar
+            android:id="@+id/foodProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateOnly="false"
+            android:progress="100"
+            android:progressDrawable="@drawable/circularsbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodText">
+        </ProgressBar>
+        <EditText
+            android:hint="@string/foodIntake"
+            android:inputType="number"
+            android:id="@+id/userF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/waternfoodbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circulebutton"
+        android:layout_marginTop="125dp"
+        app:layout_constraintTop_toBottomOf="@id/dislayout"
+        app:layout_constraintStart_toEndOf="@+id/waterout"
+        app:layout_constraintEnd_toStartOf="@+id/foodout"
+        android:text="@string/submit"
+        >
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
