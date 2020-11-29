@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private SensorManager sensorManager;
     private Sensor accel;
     private TextView userDistance;
-
     private int numSteps;
     private int GOAL_STEP = 100;
     private StepDetector simpleStepDetector;
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         progressBar.setProgress(0);
         userDistance = findViewById(R.id.userDistance );
         menuButton = findViewById(R.id.menuButton);
-        dailyButton = findViewById(R.id.dailyButton);
 
 
 
@@ -58,15 +56,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sensorManager.registerListener(MainActivity.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
 
 
-
-
-
-
-
-
-
-
-
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,20 +64,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         });
 
-        dailyButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-
-            }
-        });
-
 
 
 
     }
-
 
 
     @Override

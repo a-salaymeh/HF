@@ -8,34 +8,17 @@
     tools:context=".register">
 
 
-    <!--    <ImageView-->
-    <!--        android:id="@+id/background"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:contentDescription="@string/backgroundimage"-->
-    <!--        android:scaleX="4"-->
-    <!--        android:scaleY="4"-->
-    <!--        android:translationY="60dp"-->
-    <!--        app:srcCompat="@drawable/template" />-->
 
 
     <LinearLayout
-        android:layout_width="262dp"
-        android:layout_height="334dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614">
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/logo"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="135dp"-->
-        <!--            android:layout_marginBottom="16dp"-->
-        <!--            app:srcCompat="@drawable/logo" />-->
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/RegisterText"

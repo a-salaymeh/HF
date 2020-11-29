@@ -33,7 +33,7 @@
         android:id="@+id/view1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorBackHint"
+        android:background="@color/black"
         app:layout_constraintBottom_toTopOf="@id/viewSupportForAlbumArt"
         app:layout_constraintEnd_toStartOf="@id/viewSupportForAlbumArt"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorBackHint"
+        android:background="@color/black"
         app:layout_constraintBottom_toTopOf="@id/viewSupportForBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/view1"
@@ -53,17 +53,17 @@
 
 
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/artImg"
-        android:layout_width="200dp"
-        android:layout_height="260dp"
-        android:scaleType="centerCrop"
-        android:src = "@drawable/logo_white"
-        app:layout_constraintBottom_toBottomOf="@id/viewSupportForAlbumArt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/viewSupportForAlbumArt"
-        app:riv_corner_radius = "12dp"/>
+<!--    <com.makeramen.roundedimageview.RoundedImageView-->
+<!--        android:id="@+id/artImg"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="260dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src = "@drawable/logo_white"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/viewSupportForAlbumArt"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/viewSupportForAlbumArt"-->
+<!--        app:riv_corner_radius = "12dp"/>-->
 
 
 
@@ -74,7 +74,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/nowPlaying"
-        android:textColor="@color/colorPrimaryText"
+        android:textColor="@color/purple_200"
         android:textSize = "18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
             android:gravity="center"
             android:text="@string/player"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimaryText"
+            android:textColor="@color/purple_200"
             android:textSize = "15sp"
             android:textStyle = "bold"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -179,7 +179,7 @@
             android:layout_marginStart="10dp"
             android:gravity="left"
             android:text="@string/artistName"
-            android:textColor="@color/colorSecondaryText"
+            android:textColor="@color/purple_200"
             android:textSize = "18sp"
             app:layout_constraintBottom_toTopOf="@id/playPauseBtn"/>
 
@@ -192,7 +192,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginStart="10dp"
             android:text="@string/songName"
-            android:textColor="@color/colorPrimaryText"
+            android:textColor="@color/purple_200"
             android:textSize = "22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/artistName"

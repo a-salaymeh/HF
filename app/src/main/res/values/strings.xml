@@ -24,6 +24,9 @@
     <string name="dailyText">daily check in</string>
     <string name="dailyButton">+</string>
     <string name="menuText">Menu</string>
+    <string name="submit">submit</string>
+    <string name="waterIntake">ml</string>
+    <string name="foodIntake">cal</string>
 
     <!--menu page strings-->
     <string name="Workouts">Workout Exercises</string>
@@ -39,6 +42,8 @@
     <string name="songName">Song Name</string>
     <string name="nowPlaying">Now Playing</string>
     <string name="artistName">Artist Name</string>
+
+
 
 
 
