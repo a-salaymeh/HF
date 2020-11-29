@@ -9,42 +9,69 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/excName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BenchPress"
         android:textSize="60dp"
-        android:backgroundTint="@color/purple_200"/>
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/excImg"
         android:layout_width="match_parent"
-        android:layout_height="242dp"
-        android:background="@drawable/bench_press_0" />
+        android:layout_height="232dp"
+
+        app:srcCompat="@drawable/hawkslogo" />
+
+   
+
+
+    <Spinner
+        android:id="@+id/excSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <RelativeLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
+
         tools:context=".MainActivity">
 
         <TextView
-            android:layout_width="246dp"
-            android:layout_height="203dp"
+            android:id="@+id/downTimer"
+            android:layout_width="260dp"
+            android:layout_height="250dp"
             android:layout_alignParentRight="true"
-
             android:layout_centerInParent="true"
-            android:text="1:00"
-            android:textSize="50dp" />
+            android:text="00:00"
+            android:textSize="40dp"
+            android:textColor="@color/black"/>
+
         <Button
+            android:id="@+id/startBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="167dp"
+            android:layout_marginRight="140dp"
+            android:text="Start"/>
 
+        <Button
+            android:id="@+id/RestartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="50dp"
             android:layout_marginRight="150dp"
-
-            android:text="Start" />
+            android:text="Reset"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
 
     </RelativeLayout>
 

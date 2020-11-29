@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">HF</string>
+    <string-array name="Exercises">
+        <item>BenchPress</item>
+        <item>DeadLift</item>
+        <item>PushPress</item>
+        <item>LegPress</item>
+
+    </string-array>
 
 </resources>
