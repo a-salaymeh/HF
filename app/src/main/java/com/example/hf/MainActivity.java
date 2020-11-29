@@ -18,10 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         menuButton = findViewById(R.id.menuButton);
         userText = findViewById(R.id.UsernameText);
-        Intent intent2  = getIntent();
-        String username = intent2.getStringExtra("username");
-        Log.e("mainpage", username);
-//        userText.setText(username);
+        Bundle p = getIntent().getExtras();
+        String username = p.getString("username");
+        userText.setText(username);
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

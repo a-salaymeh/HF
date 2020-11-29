@@ -51,7 +51,8 @@ public class loginPage extends AppCompatActivity {
         loginButton = findViewById(R.id.btnLogin);
         registerButton = findViewById(R.id.btnLoginRegister);
         String username = loginUsername.getText().toString();
-        Log.e("loginactivity",username);
+        Bundle user = new Bundle();
+        user.putString("username", username);
 
         if (mAuth.getCurrentUser() != null) {
             startActivity(new Intent(this, MainActivity.class));
@@ -63,7 +64,7 @@ public class loginPage extends AppCompatActivity {
                 if (username.isEmpty() && loginPassword.getText().toString().isEmpty()) {
                     Toast.makeText(loginPage.this,"empty username and password",Toast.LENGTH_LONG).show();
                 }else{
-                    signIn(username);
+                    signIn(user);
                 }
             }
         });
@@ -84,15 +85,15 @@ public class loginPage extends AppCompatActivity {
 
         configureGoogleClient();
     }
-    public void signIn(String username){
+    public void signIn(Bundle user){
         mAuth.signInWithEmailAndPassword(loginUsername.getText().toString(), loginPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     currentUser = mAuth.getCurrentUser();
                     finish();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    intent.putExtra("username", username);
+                    Intent intent = new Intent(loginPage.this, MainActivity.class);
+                    intent.putExtras(user);
                     startActivity(intent);
                 }else{
                     Toast.makeText(loginPage.this, "couldn't login", Toast.LENGTH_SHORT).show();
