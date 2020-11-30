@@ -43,6 +43,12 @@
     <string name="nowPlaying">Now Playing</string>
     <string name="artistName">Artist Name</string>
 
+    <string-array name="Exercises">
+        <item>BenchPress</item>
+        <item>DeadLift</item>
+        <item>PushPress</item>
+        <item>LegPress</item>
+    </string-array>
 
 
 
