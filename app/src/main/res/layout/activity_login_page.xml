@@ -55,7 +55,7 @@
             android:id="@+id/etLoginUsername"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:hint="@string/username"
+            android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
         <EditText

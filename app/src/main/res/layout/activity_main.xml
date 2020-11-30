@@ -86,7 +86,7 @@
         </ProgressBar>
         <EditText
             android:hint="@string/waterIntake"
-            android:inputType="number"
+            android:inputType="text"
             android:id="@+id/userWater"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -143,7 +143,7 @@
         </ProgressBar>
         <EditText
             android:hint="@string/foodIntake"
-            android:inputType="number"
+            android:inputType="text"
             android:id="@+id/userF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

@@ -130,12 +130,12 @@ public class loginPage extends AppCompatActivity {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 Log.d("loginPage", "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
-                Toast.makeText(loginPage.this, "worked", Toast.LENGTH_LONG).show();
+                Toast.makeText(loginPage.this, "Logged In", Toast.LENGTH_LONG).show();
 
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w("loginPage", "Google sign in failed", e);
-                Toast.makeText(loginPage.this, "did not work", Toast.LENGTH_LONG).show();
+                Toast.makeText(loginPage.this, "Error has happened check your Password or Email", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         }
