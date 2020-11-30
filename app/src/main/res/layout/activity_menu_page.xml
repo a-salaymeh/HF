@@ -33,14 +33,6 @@
             android:background="@color/button_colors"
             android:textSize="20sp"  />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Routine"
-            android:layout_marginTop="10dp"
-            android:background="@color/button_colors"
-            android:textSize="20sp"  />
 
         <Button
             android:id="@+id/playList"
@@ -51,23 +43,7 @@
             android:background="@color/button_colors"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Pedometer"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
-            android:background="@color/button_colors" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/button_colors"
-            android:text="@string/CIC"
-            android:textSize="20sp" />
         <Button
             android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
