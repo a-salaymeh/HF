@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/title"
@@ -8,48 +8,60 @@
     android:orientation="vertical"
     tools:context=".pageExercise">
 
-    <TextView
-        android:id="@+id/textView"
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BenchPress"
-        android:textSize="60dp"
-        android:backgroundTint="@color/purple_200"/>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="242dp"
-        android:background="@drawable/bench_press_0" />
-    <RelativeLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        tools:context=".MainActivity">
-
+        android:orientation="vertical">
         <TextView
-            android:layout_width="246dp"
-            android:layout_height="203dp"
-            android:layout_alignParentRight="true"
-
-            android:layout_centerInParent="true"
-            android:text="1:00"
-            android:textSize="50dp" />
-        <Button
+            android:id="@+id/excName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textSize="60sp"
+            android:textColor="@color/black" />
 
-            android:layout_marginRight="150dp"
+        <ImageView
+            android:id="@+id/excImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/hawkslogo" />
 
-            android:text="Start" />
+        <Spinner
+            android:id="@+id/excSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    </RelativeLayout>
 
 
+        <TextView
+            android:id="@+id/downTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="00:00"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
 
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Start"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/RestartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Reset"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
