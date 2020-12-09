@@ -1,168 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainPage"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:openDrawer="start"
     tools:context=".MainActivity">
 
 
 
-    <Button
-        android:id="@+id/menuButton"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/menuText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <include layout="@layout/app_bar_home"/>
 
-    </Button>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/dislayout"
-        app:layout_constraintTop_toBottomOf="@id/menuButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/disText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/userDistance"
-        android:textSize="40sp">
-    </TextView>
 
-    <ProgressBar
-        android:id="@+id/disProgressBar"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainPage"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:indeterminateOnly="false"
-        android:progressDrawable="@drawable/circularsbar"
-        app:layout_constraintTop_toBottomOf="@+id/disText"
-        tools:progress="20">
-    </ProgressBar>
-
-    <TextView
-        android:id="@+id/userDistance"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:id="@+id/waterout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/dislayout"
-        app:layout_constraintEnd_toStartOf="@id/dislayout"
-        app:layout_constraintStart_toStartOf="@id/menuButton">
-        <TextView
-            android:id="@+id/waterText"
-            android:layout_width="wrap_content"
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="@string/waterText"
-            android:layout_gravity="center"
-            android:textSize="25sp">
-
-        </TextView>
-        <ProgressBar
-            android:id="@+id/waterProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:indeterminateOnly="false"
-            android:layout_gravity="center"
-            android:progress="100"
-            android:progressDrawable="@drawable/circularsbar">
-        </ProgressBar>
-        <EditText
-            android:hint="@string/waterIntake"
-            android:inputType="text"
-            android:id="@+id/userWater"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </EditText>
-
-    </LinearLayout>
-    <View
-        android:id="@+id/view1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/menuText"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </View>
-
-    <LinearLayout
-        android:id="@+id/foodout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@id/dislayout"
-        app:layout_constraintTop_toBottomOf="@id/dislayout"
-        app:layout_constraintEnd_toStartOf="@+id/view1">
-
-        <TextView
-            android:id="@+id/foodhelper"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text="@string/waterText"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            tools:ignore="Suspicious0dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/foodText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/foodText"
-            android:textSize="25sp">
-        </TextView>
-        <ProgressBar
-            android:id="@+id/foodProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:indeterminateOnly="false"
-            android:progress="100"
-            android:progressDrawable="@drawable/circularsbar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/menuText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodText">
-        </ProgressBar>
-        <EditText
-            android:hint="@string/foodIntake"
-            android:inputType="text"
-            android:id="@+id/userF"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/dislayout"
+            app:layout_constraintTop_toBottomOf="@id/menuButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/disText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/userDistance"
+                android:textSize="40sp">
+            </TextView>
+
+            <ProgressBar
+                android:id="@+id/disProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/circularsbar"
+                app:layout_constraintTop_toBottomOf="@+id/disText"
+                tools:progress="20">
+            </ProgressBar>
+
+            <TextView
+                android:id="@+id/userDistance"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/waterout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/dislayout"
+            app:layout_constraintEnd_toStartOf="@id/dislayout"
+            app:layout_constraintStart_toStartOf="@id/menuButton">
+            <TextView
+                android:id="@+id/waterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waterText"
+                android:layout_gravity="center"
+                android:textSize="25sp">
+
+            </TextView>
+            <ProgressBar
+                android:id="@+id/waterProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminateOnly="false"
+                android:layout_gravity="center"
+                android:progress="100"
+                android:progressDrawable="@drawable/circularsbar">
+            </ProgressBar>
+            <EditText
+                android:hint="@string/waterIntake"
+                android:inputType="text"
+                android:id="@+id/userWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/menuText"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </View>
+
+        <LinearLayout
+            android:id="@+id/foodout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/dislayout"
+            app:layout_constraintTop_toBottomOf="@id/dislayout"
+            app:layout_constraintEnd_toStartOf="@+id/view1">
+
+            <TextView
+                android:id="@+id/foodhelper"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/waterText"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                tools:ignore="Suspicious0dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/foodText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/foodText"
+                android:textSize="25sp">
+            </TextView>
+            <ProgressBar
+                android:id="@+id/foodProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminateOnly="false"
+                android:progress="100"
+                android:progressDrawable="@drawable/circularsbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodText">
+            </ProgressBar>
+            <EditText
+                android:hint="@string/foodIntake"
+                android:inputType="text"
+                android:id="@+id/userF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/waternfoodbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circulebutton"
+            android:layout_marginTop="125dp"
+            app:layout_constraintTop_toBottomOf="@id/dislayout"
+            app:layout_constraintStart_toEndOf="@+id/waterout"
+            app:layout_constraintEnd_toStartOf="@+id/foodout"
+            android:text="@string/submit"
+            >
+        </Button>
+        <FrameLayout
+            android:id="@+id/your_placeholder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </EditText>
+            android:layout_height="match_parent"
 
 
-    </LinearLayout>
-    <Button
-        android:id="@+id/waternfoodbutton"
+            >
+        </FrameLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/circulebutton"
-        android:layout_marginTop="125dp"
-        app:layout_constraintTop_toBottomOf="@id/dislayout"
-        app:layout_constraintStart_toEndOf="@+id/waterout"
-        app:layout_constraintEnd_toStartOf="@+id/foodout"
-        android:text="@string/submit"
-        >
-    </Button>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/activity_main_drawer" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

@@ -1,7 +1,14 @@
 package com.example.hf;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Lifecycle;
 
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -10,14 +17,18 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
@@ -34,7 +45,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener, StepListener{
+public class MainActivity extends AppCompatActivity implements SensorEventListener, StepListener, NavigationView.OnNavigationItemSelectedListener{
     private Button menuButton;
     private Button dailyButton;
     private ProgressBar progressBar;
@@ -53,6 +64,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     String waterMl;
     String foodCal;
 
+
+    DrawerLayout drawerLayout;
+    Toolbar toolbar;
+    FrameLayout frameLayout;
+    NavigationView navigationView;
 
 
 
@@ -128,8 +144,30 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         });
 
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        frameLayout = (FrameLayout) findViewById(R.id.content_frame);
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.setDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
     }
 
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
@@ -150,7 +188,53 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         float val = (float) numSteps/GOAL_STEP;
         progressBar.setProgress((int) Math.floor(100.0*(val)));
-        userDistance.setText("@string/userDistance" + numSteps);
+        userDistance.setText(getString(R.string.steps) + numSteps);
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //to prevent current item select over and over
+        if (item.isChecked()){
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return false;
+        }
+
+        if (id == R.id.nav_home) {
+            // Handle the camera action
+           if (!getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.RESUMED)){
+               startActivity(new Intent(getApplicationContext(), MainActivity.class));
+           }
+
+
+        } else if (id == R.id.nav_Workout) {
+            startActivity(new Intent(getApplicationContext(), pageExercise.class));
+        } else if (id == R.id.nav_Player) {
+            startActivity(new Intent(getApplicationContext(), SpotifyPlayer.class));
+        } else if (id == R.id.nav_list) {
+            //startActivity(new Intent(getApplicationContext(), ManageActivity.class));
+            loadFragment();
+        } else if (id == R.id.nav_logout) {
+            //              firebase
+            FirebaseAuth.getInstance().signOut();
+//               closes the application
+            finishAffinity();
+//            startActivity(new Intent(getApplicationContext(), ShareActivity.class));
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    public void loadFragment() {
+        // Begin the transaction
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        // Replace the contents of the container with the new fragment
+        ft.replace(R.id.your_placeholder, new ListFrag());
+        // or ft.add(R.id.your_placeholder, new FooFragment());
+        // Complete the changes added above
+        ft.commit();
+
 
     }
 }

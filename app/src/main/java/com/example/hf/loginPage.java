@@ -85,6 +85,8 @@ public class loginPage extends AppCompatActivity {
 
         configureGoogleClient();
     }
+
+
     public void signIn(Bundle user){
         mAuth.signInWithEmailAndPassword(loginUsername.getText().toString(), loginPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
