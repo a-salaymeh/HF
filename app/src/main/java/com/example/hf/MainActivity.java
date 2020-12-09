@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Lifecycle;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -63,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     FirebaseFirestore db;
     String waterMl;
     String foodCal;
+    SQLiteDatabase db2;
+    dataBaseHelper dbHelper;
+
 
 
     DrawerLayout drawerLayout;
@@ -74,6 +79,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        dbHelper = new dataBaseHelper(this);
+
+        db2 = dbHelper.getWritableDatabase();
+
         db = FirebaseFirestore.getInstance();
 
         super.onCreate(savedInstanceState);
@@ -138,6 +147,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                                 Log.d("mainactivity", "error adding documents");
                             }
                         });
+
+
+
+                ContentValues values = new ContentValues();
+                values.put(dataBaseHelper.KEY_MESSAGE,  foodCal);
+                db2.insert(dataBaseHelper.TABLE_NAME, null, values);
+
+
                 waterTxt.setText("");
                 foodTxt.setText("");
             }
