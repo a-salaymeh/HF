@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-               startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
 
 
