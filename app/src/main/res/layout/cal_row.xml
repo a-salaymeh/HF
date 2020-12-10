@@ -18,12 +18,12 @@
         android:layout_weight="1"
         android:text="TextView" />
 
-    <TextView
-        android:id="@+id/timeTextView"
-        android:layout_width="398dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+<!--    <TextView-->
+<!--        android:id="@+id/timeTextView"-->
+<!--        android:layout_width="398dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="TextView" />-->
 
 
 

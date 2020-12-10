@@ -5,16 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".ListFrag"
     android:id = "@+id/theFrameLayout"
-    android:src = "@color/white">
+    android:background = "@color/white">
     <!--    android:background="@drawable/rectangles"-->
 <!--    android:elevation="5dp"-->
+
+<!--    <include layout="@layout/app_bar_home"/>-->
+    <!--        android:layout_marginTop="55dp"-->
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        android:layout_marginTop="55dp">
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
