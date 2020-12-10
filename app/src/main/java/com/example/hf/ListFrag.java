@@ -75,16 +75,23 @@ public class ListFrag extends Fragment {
 //            mParam1 = getArguments().getString(ARG_PARAM1);
 //            mParam2 = getArguments().getString(ARG_PARAM2);
 //        }
+    }
 
-
-
-
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_list, container, false);
 
         dbHelper = new dataBaseHelper(getActivity());
 
         db = dbHelper.getWritableDatabase();
 
         cursor = db.rawQuery("SELECT message FROM tableofMsg", null);
+        messageAdapter =new ChatAdapter(getActivity());
+
+        listview = view.findViewById(R.id.list_view);
+
 
         cursor.moveToFirst();
 
@@ -109,15 +116,7 @@ public class ListFrag extends Fragment {
 
 
         listview.setAdapter (messageAdapter);
-
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        return view;
     }
 
     public class ChatAdapter extends ArrayAdapter<String> {

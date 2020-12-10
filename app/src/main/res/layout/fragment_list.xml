@@ -5,7 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ListFrag"
     android:id = "@+id/theFrameLayout"
-    android:background="@color/white">
+    android:src = "@color/white">
+    <!--    android:background="@drawable/rectangles"-->
+<!--    android:elevation="5dp"-->
+
 
     <RelativeLayout
         android:layout_width="match_parent"
