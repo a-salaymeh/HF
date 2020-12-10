@@ -221,9 +221,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-           if (!getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.RESUMED)){
                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-           }
+
 
 
         } else if (id == R.id.nav_Workout) {

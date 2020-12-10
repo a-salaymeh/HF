@@ -74,7 +74,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/nowPlaying"
-        android:textColor="@color/purple_200"
+        android:textColor="@color/yellow"
         android:textSize = "18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
